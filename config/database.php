@@ -30,7 +30,12 @@ return [
     */
 
     'connections' => [
-
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('DB_URI', 'mongodb+srv://username:password@<atlas-cluster-uri>/myappdb?retryWrites=true&w=majority'),
+            'database' => 'memory-game',
+        ],
+        
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
